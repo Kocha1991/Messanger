@@ -1,0 +1,44 @@
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 10% 10% 70% 10%;
+  grid-template-areas:
+    "search contact"
+    "search message"
+    "chat message"
+    "chat search-message";
+}
+#search {
+  grid-area: search;
+}
+#chat {
+  grid-area: chat;
+}
+#contact {
+  grid-area: contact;
+}
+#messages {
+  grid-area: message;
+}
+#search-message {
+  grid-area: search-message;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+.wrapper-scroll {
+  overflow: auto;
+  height: 80%;
+  overflow-y:scroll; 
+  &_messages {
+    height: 100%;
+  }
+}
+.message {
+  overflow: hidden;
+}
