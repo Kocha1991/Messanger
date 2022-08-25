@@ -6,6 +6,7 @@ import { contactsData, messagesData } from "../../helpers/constants";
 
 const ChatItem = ({ contact, handleContactClick }) => {
   const { id, firstName, secondName, avatar, availabilityStatus } = contact;
+  
 
   const [userMessages, setUserMessage] = useState(null);
   const [lastMessage, setLastMessage] = useState(null);
@@ -28,7 +29,10 @@ const ChatItem = ({ contact, handleContactClick }) => {
         {firstName} {secondName}
       </div>
       {!lastMessage ? (
-        <div>No messages yet</div>
+        <>
+        <div className="message message_no">No messages yet!</div>
+        <div className="user__devider"></div>
+        </>  
       ) : (
         <>
           <div className="data">

@@ -1,6 +1,7 @@
 import React from "react";
 import ChatItem from "./ChatItem";
 
+
 import "./style.scss";
 
 const ChatList = ({ contacts, handleContactClick }) => {

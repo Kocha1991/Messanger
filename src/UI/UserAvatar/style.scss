@@ -12,17 +12,16 @@
 
 .status {
   position: absolute;
-  bottom: 0;
+  bottom: 0;;
   right: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  &_afkStatus {
+    color: red
+  }
+  &_onlineStatus {
+    color: green;
+  }
 }
 
-.afkStatus {
-  background-color: red;
-}
 
-.onlineStatus {
-  background-color: green;
-}
+
+

@@ -44,8 +44,8 @@ export const contactsData = [
 ];
 
 export const messagesData = [
-  { userId: 0, date: new Date(), messageText: "Lorem ipsum dolor sit amet consectetur" },
-  { userId: 0, date: new Date(), messageText: "last" },
+  { userId: 8, date: new Date(), messageText: "Lorem ipsum dolor sit amet consectetur" },
+  { userId: 8, date: new Date(), messageText: "last" },
   {
     userId: 1,
     date: new Date(),
@@ -79,9 +79,9 @@ export const messagesData = [
     messageText: "Lorem ipsum dolor sit amet consectetur",
   },
   { userId: 5, date: new Date(), messageText: "Lorem ipsum dolor sit amet consectetur" },
-  { userId: 6, date: new Date(), messageText: "Instead of focusing on words, turn your ideas into meaningful messages in seconds by using methods such as rephrasing, suggesting appropriate phrases, and correcting grammatical errors." },
+  { userId: 5 , date: new Date(), messageText: "Instead of focusing on words, turn your ideas into meaningful messages in seconds by using methods such as rephrasing, suggesting appropriate phrases, and correcting grammatical errors." },
   {
-    userId: 6,
+    userId: 5,
     date: new Date(),
     messageText: "Lorem ipsum dolor sit amet consectetur",
   },

@@ -11,7 +11,7 @@ const Messages = () => {
     <>
       <Contact />
       <div id="messages" className="messages">
-        <div className="wrapper-scroll wrapper-scroll_messages">
+        <div className="wrapper-scroll wrapper-scroll_messages ">
 
           <div className="messages__friend">
             <img src={Ava} alt="" className="avatar" />

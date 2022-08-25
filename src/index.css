@@ -17,7 +17,9 @@ code {
   box-sizing: border-box;
 }
 
+
 ::-webkit-scrollbar {
+  display: block;
   width: 10px;
 }
 
@@ -31,4 +33,5 @@ code {
   background: #0d435cd5;
   border-radius: 10px;
 }
+
 

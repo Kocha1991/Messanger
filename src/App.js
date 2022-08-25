@@ -7,6 +7,7 @@ import Messages from "./Messages";
 import SearchMessages from "./UI/SearchMessages";
 import { filterContacts } from "./helpers/helpers";
 import { contactsData, messagesData } from "./helpers/constants";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function App() {
   const [searchedContact, setSearchContact] = useState("");
@@ -61,6 +62,8 @@ function App() {
       <SearchMessages />
     </div>
   );
+
+  
 }
 
 export default App;
