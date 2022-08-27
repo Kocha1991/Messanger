@@ -3,31 +3,40 @@
   width: 100%;
   background-color: rgb(249, 249, 249);
   border: 1px solid rgb(208, 208, 208);
+  &__wrapper {
+    &_friend {
+      display: flex;
+      gap: 10px;
+    }
+    &_your{
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+  }
   &__friend {
     margin-right: 150px;
-    display: flex;
     padding: 10px;
-    gap: 10px;
   }
   &__your {
     margin-left: 150px;
     padding: 10px;
-    gap: 10px;
-    justify-content: flex-end;
   }
   &__data {
+    display: block;
     font-size: 12px;
     margin-bottom: 20px;
     color: rgba($color: #000000, $alpha: 0.7);
     &_friend {
-        display: flex;
-        justify-content: start;
-        margin-left: 100px;
+      display: block;
+      justify-content: start;
+      margin-left: 100px;
+      top: 170px;
     }
     &_your {
-        display: flex;
-        justify-content: flex-end;
-        margin-right: 40px;  
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 40px;
     }
   }
 }
@@ -38,12 +47,11 @@
   border-radius: 30px;
   &_friend {
     background-color: rgba($color: #0d435c, $alpha: 0.8);
-    color:white;
+    color: white;
     font-size: 14px;
   }
   &_your {
     background-color: #fff;
     border: 1px solid rgb(208, 208, 208);
   }
-  
 }

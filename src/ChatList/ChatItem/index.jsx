@@ -1,25 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import "./style.scss";
 import UserAvatar from "../../UI/UserAvatar";
-import { contactsData, messagesData } from "../../helpers/constants";
+import DateStamp from "../../UI/DateStamp";
 
 const ChatItem = ({ contact, handleContactClick }) => {
-  const { id, firstName, secondName, avatar, availabilityStatus } = contact;
-  
+  const { firstName, secondName, avatar, availabilityStatus, messages } =
+    contact;
 
-  const [userMessages, setUserMessage] = useState(null);
-  const [lastMessage, setLastMessage] = useState(null);
-
-  useEffect(() => {
-    const foundUserMessages = messagesData.filter(
-      (message) => id === message.userId
-    );
-    setUserMessage(foundUserMessages);
-    if (foundUserMessages && foundUserMessages.length) {
-      setLastMessage(foundUserMessages[foundUserMessages.length - 1]);
-    }
-  }, []);
   return (
     <div className="user" onClick={() => handleContactClick(contact)}>
       <div className="user__avatar">
@@ -28,17 +16,19 @@ const ChatItem = ({ contact, handleContactClick }) => {
       <div className="name">
         {firstName} {secondName}
       </div>
-      {!lastMessage ? (
+      {!messages.length ? (
         <>
-        <div className="message message_no">No messages yet!</div>
-        <div className="user__devider"></div>
-        </>  
+          <div className="message message_no">No messages yet!</div>
+          <div className="user__devider"></div>
+        </>
       ) : (
         <>
           <div className="data">
-            {new Date(lastMessage.date).toLocaleDateString("us")}
+            <DateStamp date={messages[messages.length - 1].date} />
           </div>
-          <div className="message">{lastMessage.messageText}</div>
+          <div className="message">
+            {messages[messages.length - 1].messageText}
+          </div>
           <div className="user__devider"></div>
         </>
       )}

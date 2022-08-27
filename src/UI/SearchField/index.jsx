@@ -2,12 +2,12 @@ import React from "react";
 import "./style.scss";
 import Ava from "../../Img/icons/4people.jpg";
 import { AiOutlineSearch } from "react-icons/ai";
-import { contactsData } from "../../helpers/constants";
 
 const Search = ({ onSearchChange, searchedContact }) => {
   return (
     <div id="search" className="search">
       <img src={Ava} alt="avatar" className="avatar" />
+
       <div className="search__chat">
         <input
           type="text"
@@ -15,7 +15,7 @@ const Search = ({ onSearchChange, searchedContact }) => {
           onChange={onSearchChange}
           value={searchedContact}
         ></input>
-        <AiOutlineSearch className="search__icon"/>
+        <AiOutlineSearch className="search__icon" />
       </div>
     </div>
   );

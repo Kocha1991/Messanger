@@ -1,15 +1,18 @@
-import React from 'react'
-import Ava from '../Img/icons/3people.jpg'
+import React from "react";
+import UserAvatar from "../UI/UserAvatar";
 
-import './style.scss';
+import "./style.scss";
 
-const Contact = () => {
+const Contact = ({ firstName, secondName, avatar, availabilityStatus }) => {
   return (
-    <div id='contact' className='contact'>
-      <img src={Ava} alt="avatar" className="avatar" />
-      <div className="name">Potru-morkovky</div>
-    </div>
-  )
-}
+    <div id="contact" className="contact">
+      <UserAvatar avatar={avatar} availabilityStatus={availabilityStatus} />
 
-export default Contact
+      <div className="name">
+        {firstName} {secondName}
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
