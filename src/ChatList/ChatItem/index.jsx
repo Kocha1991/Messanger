@@ -5,8 +5,14 @@ import UserAvatar from "../../UI/UserAvatar";
 import DateStamp from "../../UI/DateStamp";
 
 const ChatItem = ({ contact, handleContactClick }) => {
-  const { firstName, secondName, avatar, availabilityStatus, messages } =
-    contact;
+  const {
+    firstName,
+    secondName,
+    avatar,
+    availabilityStatus,
+    messages,
+    newUnreadMesssages,
+  } = contact;
 
   return (
     <div className="user" onClick={() => handleContactClick(contact)}>
@@ -16,6 +22,7 @@ const ChatItem = ({ contact, handleContactClick }) => {
       <div className="name">
         {firstName} {secondName}
       </div>
+      {newUnreadMesssages && <div>New messages!!!!!</div>}
       {!messages.length ? (
         <>
           <div className="message message_no">No messages yet!</div>
@@ -23,7 +30,7 @@ const ChatItem = ({ contact, handleContactClick }) => {
         </>
       ) : (
         <>
-          <div className="data">
+          <div className="messades__data">
             <DateStamp date={messages[messages.length - 1].date} />
           </div>
           <div className="message">

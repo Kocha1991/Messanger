@@ -5,7 +5,7 @@ import Search from "./UI/SearchField";
 import "./App.scss";
 import Messages from "./Messages";
 import NewMessage from "./UI/NewMessage";
-import { contactsData as data, myUserId } from "./helpers/constants";
+import { contactsData as data, myUser } from "./helpers/constants";
 import { getChatResponseMessage } from "./helpers/api";
 import { makeUniqueId } from "./helpers";
 
@@ -32,7 +32,7 @@ function App() {
 
   const handleNewMessageSend = (userId) => {
     const newMessage = {
-      id: makeUniqueId(myUserId),
+      id: makeUniqueId(myUser.id),
       date: new Date(),
       isMyMessage: true,
       messageText: newMessageText,
@@ -53,14 +53,16 @@ function App() {
           : c
       )
     );
+
     setNewMessageText("");
 
-    const messageDebounce = setTimeout(() => {
-      getChatResponseMessage()
-        .then((res) => {
+    getChatResponseMessage()
+      .then((res) => {
+        setTimeout(() => {
           const receivedMessage = {
             id: res.data.id,
             messageText: res.data.value,
+
             date: new Date(),
             isMyMessage: false,
           };
@@ -75,24 +77,35 @@ function App() {
               c.id === userId
                 ? {
                     ...c,
-                    lastModified: new Date(),
+                    lastModified: c.id === userId ? new Date() : c.lastModified,
+                    newUnreadMesssages: true,
                     messages: [...c.messages, receivedMessage],
                   }
                 : c
             )
           );
-        })
-        .catch((e) => console.log(e));
-    }, 10000);
-
-    return () => clearTimeout(messageDebounce);
+        }, 10000);
+      })
+      .catch((e) => console.log(e));
   };
 
   useEffect(() => {
     localStorage.setItem("storageContacts", JSON.stringify(contactsData));
   }, [contactsData]);
 
-  const handleContactClick = (contact) => setSelectedContact(contact);
+  const handleContactClick = (contact) => {
+    setSelectedContact({ ...contact, newUnreadMesssages: false });
+    setContactsData((prev) =>
+      prev.map((c) =>
+        c.id === contact.id
+          ? {
+              ...c,
+              newUnreadMesssages: false,
+            }
+          : c
+      )
+    );
+  };
 
   return (
     <div className="main">

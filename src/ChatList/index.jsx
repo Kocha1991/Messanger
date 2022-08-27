@@ -9,17 +9,23 @@ const ChatList = ({ contacts, handleContactClick, searchedContact }) => {
     <div id="chat" className="chat">
       <div className="chat__header">Chats</div>
       <div className="wrapper-scroll">
-        {contacts.sort().map((contact) =>      
-          filterContacts(searchedContact, contact) ? (
-            <ChatItem
-              contact={contact}
-              key={contact.id}
-              handleContactClick={handleContactClick}
-            />
-          ) : (
-            ""
+        {contacts
+          .sort(
+            (prevContact, nextContact) =>
+              new Date(nextContact.lastModified) -
+              new Date(prevContact.lastModified)
           )
-        )}
+          .map((contact) =>
+            filterContacts(searchedContact, contact) ? (
+              <ChatItem
+                contact={contact}
+                key={contact.id}
+                handleContactClick={handleContactClick}
+              />
+            ) : (
+              ""
+            )
+          )}
       </div>
     </div>
   );

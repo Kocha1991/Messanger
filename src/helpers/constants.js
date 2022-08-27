@@ -1,4 +1,13 @@
-export const myUserId = 0;
+
+export const myUser = {
+  id: 0,
+  firstName: "Alice",
+  lastModified: new Date(),
+  secondName: "Freeman",
+  avatar: "https://i.ibb.co/bbQX9gK/1people.jpg",
+  availabilityStatus: "Online",
+  newUnreadMesssages: false,
+}
 
 export const contactsData = [
   {
@@ -8,6 +17,7 @@ export const contactsData = [
     secondName: "Freeman",
     avatar: "https://i.ibb.co/bbQX9gK/1people.jpg",
     availabilityStatus: "Online",
+    newUnreadMesssages: false,
     messages: [
       {
         date: new Date(),
@@ -26,8 +36,10 @@ export const contactsData = [
     id: 1,
     firstName: "Frank",
     secondName: "Bener",
+    lastModified: new Date(),
     avatar: "https://i.ibb.co/kDVDqZf/4people.jpg",
     availabilityStatus: "AFK",
+    newUnreadMesssages: false,
     messages: [
       {
         date: new Date(),
@@ -46,8 +58,10 @@ export const contactsData = [
     id: 2,
     firstName: "Judy",
     secondName: "Ray",
+    lastModified: new Date(),
     avatar: "https://i.ibb.co/b3t3pYf/3people.jpg",
     availabilityStatus: "Online",
+    newUnreadMesssages: false,
     messages: [
       {
         date: new Date(),
@@ -66,8 +80,10 @@ export const contactsData = [
     id: 3,
     firstName: "Donald",
     secondName: "Rondon",
+    lastModified: new Date(),
     avatar: "https://i.ibb.co/9bRhRW2/ava-pats-12.jpg",
     availabilityStatus: "Online",
+    newUnreadMesssages: false,
     messages: [
       {
         date: new Date(),
@@ -86,8 +102,10 @@ export const contactsData = [
     id: 4,
     firstName: "Karl",
     secondName: "Swift",
+    lastModified: new Date(),
     avatar: "https://i.ibb.co/fMympnX/1551511825-37.jpg",
     availabilityStatus: "AFK",
+    newUnreadMesssages: false,
     messages: [
       {
         date: new Date(),
@@ -106,6 +124,8 @@ export const contactsData = [
     id: 5,
     firstName: "Kler",
     secondName: "Fill",
+    lastModified: new Date(),
+    newUnreadMesssages: false,
     avatar: "https://i.ibb.co/gZGpYdy/images-1.jpg",
     availabilityStatus: "AFK",
     messages: [],

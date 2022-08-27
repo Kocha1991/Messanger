@@ -1,15 +1,16 @@
-.send-message {
+.send-messages {
   padding: 20px;
   width: 100%;
   background-color: rgb(237, 237, 237);
   border: 1px solid rgb(208, 208, 208);
   position: relative;
   &__type {
+    position: relative;
     display: flex;
     align-self: center;
     input {
       margin: auto;
-      padding: 2px 40px 2px 15;
+      padding: 2px 40px 2px 15px;
       width: 90%;
       height: 40px;
       border: none;
@@ -17,11 +18,29 @@
       border: 2px solid rgb(208, 208, 208);
       outline: none;
     }
-  }
-  &_btn {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    cursor: pointer;
-  }
+    &__btn {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      border: none;
+      right: 60px;
+      top: 6px;
+      font-size: 25px; 
+      background-color:#fff; 
+    }
+  }  
 }
+
+.icon {
+  &_on {
+    background-color: #fff;
+    transition: all 0.8s; 
+  }
+  &_off {
+    background-color: #fff;
+    color:#0d435c;
+    transition: all 0.8s; 
+  }
+  
+}
+
