@@ -1,5 +1,5 @@
 import React from "react";
-
+import { IoIosChatboxes } from 'react-icons/io'
 import "./style.scss";
 import UserAvatar from "../../UI/UserAvatar";
 import DateStamp from "../../UI/DateStamp";
@@ -22,7 +22,7 @@ const ChatItem = ({ contact, handleContactClick }) => {
       <div className="name">
         {firstName} {secondName}
       </div>
-      {newUnreadMesssages && <div>New messages!!!!!</div>}
+      {newUnreadMesssages && <IoIosChatboxes className="missed-message"/>}
       {!messages.length ? (
         <>
           <div className="message message_no">No messages yet!</div>

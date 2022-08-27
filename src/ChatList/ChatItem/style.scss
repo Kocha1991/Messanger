@@ -28,8 +28,6 @@
   }
 }
 
-
-
 .message {
   font-size: 14px;
   color: rgba($color: #000000, $alpha: 0.7);
@@ -40,4 +38,12 @@
     font-weight: 600;
     color: rgba(255, 60, 0, 0.822);
   }
+}
+
+.missed-message {
+  position: absolute;
+  top:1%;
+  left:3%;
+  font-size: 24px;
+  color: red
 }
