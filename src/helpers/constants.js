@@ -1,10 +1,10 @@
 
 export const myUser = {
   id: 0,
-  firstName: "Alice",
+  firstName: "Roman",
   lastModified: new Date(),
-  secondName: "Freeman",
-  avatar: "https://i.ibb.co/bbQX9gK/1people.jpg",
+  secondName: "Kocherha",
+  avatar: "https://i.ibb.co/2PGLj4x/images.jpg",
   availabilityStatus: "Online",
   newUnreadMesssages: false,
 }

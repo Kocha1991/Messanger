@@ -64,3 +64,23 @@
     border: 1px solid rgb(208, 208, 208);
   }
 }
+
+@media (max-width: 1024px) {
+  .messages {
+    &__data {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .messages {
+    &__data {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+  }
+}
+
+

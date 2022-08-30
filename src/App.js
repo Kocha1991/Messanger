@@ -52,6 +52,7 @@ function App() {
             }
           : c
       )
+    
     );
 
     setNewMessageText("");
@@ -105,6 +106,7 @@ function App() {
           : c
       )
     );
+      
   };
 
   return (

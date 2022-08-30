@@ -34,7 +34,7 @@
 .wrapper-scroll {
   overflow: auto;
   height: 80%;
-  overflow-y:scroll; 
+  overflow-y: scroll;
   &_messages {
     height: 100%;
   }
@@ -42,3 +42,27 @@
 .message {
   overflow: hidden;
 }
+
+@media (max-width: 1024px) {
+  .main{
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 12% 10% 68% 10%; 
+  }
+  .name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 922px) {
+  .main{
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 12% 10% 68% 10%; 
+  }
+}
+@media (max-width: 768px) {
+  .main{
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 12% 10% 68% 10%; 
+  }
+}
+

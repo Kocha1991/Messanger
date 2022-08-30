@@ -6,8 +6,6 @@ import MessageItem from "./MessageItem";
 import "./style.scss";
 
 const Messages = ({ selectedContact }) => {
-  //вивести меседжі , якщо їх немає , то повідомлення що немає.
-  //дані про вибраного контакта*аватара, імя беремо selectedContact
 
   return !selectedContact ? (
     <div id="messages" className="messages">

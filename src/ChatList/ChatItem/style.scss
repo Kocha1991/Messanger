@@ -13,12 +13,6 @@
     grid-column: 1 / 2;
     margin: auto;
   }
-  &__name {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 18px;
-  }
   &__devider {
     width: 100%;
     height: 2px;
@@ -42,8 +36,57 @@
 
 .missed-message {
   position: absolute;
-  top:1%;
-  left:3%;
+  top: 1%;
+  left: 3%;
   font-size: 24px;
-  color: red
+  color: red;
+}
+
+@media (max-width: 1024px) {
+  .user {
+    padding: 10px;
+    &__name {
+      font-size: 14px;
+    }
+  }
+  .message_no {
+    left: 35%;
+  }
+}
+@media (max-width: 768px) {
+  .user {
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: 40% 15% 40% 5%;
+    gap: 0px ;
+    &__avatar{
+      margin-bottom: 10px;
+    }
+    grid-template-areas:
+    'user-avatar name'
+    'data data'
+    'messages messages'
+    'devider devider'
+
+  }
+  #user-avatar {
+    grid-area: user-avatar;
+  }
+  #name {
+    grid-area: name;
+  }
+  #messages {
+    grid-area: messages;
+  }
+  #data {
+    grid-area: data;
+  }
+  #devider {
+    grid-area: devider;
+  }
+}
+@media (max-width:768px){
+  .message {
+    display: none;
+  }
 }
