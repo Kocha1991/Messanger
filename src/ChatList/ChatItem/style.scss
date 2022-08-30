@@ -56,18 +56,17 @@
 @media (max-width: 768px) {
   .user {
     display: grid;
-    grid-template-columns:50% 50%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 40% 15% 40% 5%;
-    gap: 0px ;
-    &__avatar{
+    gap: 0px;
+    &__avatar {
       margin-bottom: 10px;
     }
     grid-template-areas:
-    'user-avatar name'
-    'data data'
-    'messages messages'
-    'devider devider'
-
+      "user-avatar name"
+      "data data"
+      "messages messages"
+      "devider devider";
   }
   #user-avatar {
     grid-area: user-avatar;
@@ -85,8 +84,47 @@
     grid-area: devider;
   }
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .message {
     display: none;
+  }
+}
+@media (max-width: 680px) {
+  .user {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 40px 25px 5px;
+    gap: 0px;
+    &__avatar {
+      margin-bottom: 10px;
+      &__name {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+        &__devider {
+          margin-top: 10px;
+        }
+      }
+    }
+    grid-template-areas:
+      "user-avatar"
+      "name"
+      "data "
+      "devider";
+  }
+  #user-avatar {
+    grid-area: user-avatar;
+  }
+  #name {
+    grid-area: name;
+  }
+  #messages {
+    grid-area: messages;
+  }
+  #data {
+    grid-area: data;
+  }
+  #devider {
+    grid-area: devider;
   }
 }
